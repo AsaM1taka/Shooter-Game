@@ -39,4 +39,7 @@ shape = SubResource("RectangleShape2D_cvnsp")
 
 [node name="cameraremotetransform" type="RemoteTransform2D" parent="."]
 
+[node name="shootypart" type="Node2D" parent="."]
+position = Vector2(79, 0)
+
 [connection signal="body_entered" from="hitbox" to="." method="_on_hitbox_body_entered"]
