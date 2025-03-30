@@ -39,3 +39,7 @@ func _on_playerdetect_body_exited(body: Node2D) -> void:
 			player = null
 			print(name + "lost player")
 	pass # Replace with function body.
+	
+func _on_enemyhitbox_body_entered(body: Node2D) -> void:
+	if body is Bullet:
+		pass

@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://c8nn2vckjtl6y"]
+[gd_scene load_steps=6 format=3 uid="uid://c8nn2vckjtl6y"]
 
 [ext_resource type="Script" uid="uid://bw7jy2hsuuecv" path="res://scripts/enemy.gd" id="1_1f0kj"]
 [ext_resource type="Texture2D" uid="uid://con5xjm7gn3v8" path="res://icon.svg" id="1_7k104"]
@@ -8,6 +8,9 @@ size = Vector2(73, 65)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_qi2p4"]
 radius = 347.868
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1f0kj"]
+size = Vector2(80, 68)
 
 [node name="enemy" type="CharacterBody2D"]
 collision_layer = 8
@@ -30,5 +33,14 @@ collision_mask = 2
 [node name="CollisionShape2D" type="CollisionShape2D" parent="playerdetect"]
 shape = SubResource("CircleShape2D_qi2p4")
 
+[node name="enemyhitbox" type="Area2D" parent="."]
+collision_layer = 64
+collision_mask = 32
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemyhitbox"]
+position = Vector2(1, -1)
+shape = SubResource("RectangleShape2D_1f0kj")
+
 [connection signal="body_entered" from="playerdetect" to="." method="_on_playerdetect_body_entered"]
 [connection signal="body_exited" from="playerdetect" to="." method="_on_playerdetect_body_exited"]
+[connection signal="body_entered" from="enemyhitbox" to="." method="_on_enemyhitbox_body_entered"]
