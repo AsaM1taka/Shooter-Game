@@ -1,9 +1,11 @@
 extends Node2D
 
 @onready var player = $player
+@onready var mainCamera = $MainCamera
 
 func _ready() -> void:
 	player.died.connect(_on_player_died)
+	player.camera_remote_transform.remote_path = mainCamera.get_path()
 
 func _on_player_died():
 	print("gameover")

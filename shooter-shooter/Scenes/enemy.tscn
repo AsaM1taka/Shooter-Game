@@ -29,3 +29,6 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="playerdetect"]
 shape = SubResource("CircleShape2D_qi2p4")
+
+[connection signal="body_entered" from="playerdetect" to="." method="_on_playerdetect_body_entered"]
+[connection signal="body_exited" from="playerdetect" to="." method="_on_playerdetect_body_exited"]
