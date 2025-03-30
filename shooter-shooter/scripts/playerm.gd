@@ -1,6 +1,9 @@
 extends CharacterBody2D
+class_name Player
 
 signal died
+
+@onready var camera_remote_transform = $cameraremotetransform
 
 var speed = 300
 
