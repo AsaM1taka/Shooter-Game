@@ -15,7 +15,8 @@ collision_mask = 17
 script = ExtResource("1_v0iea")
 
 [node name="BODY" type="Sprite2D" parent="."]
-position = Vector2(2.98023e-08, 0)
+texture_filter = 1
+position = Vector2(-27, -2)
 scale = Vector2(0.492188, 0.523438)
 texture = ExtResource("2_cvnsp")
 
@@ -35,6 +36,7 @@ collision_layer = 4
 collision_mask = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox"]
+position = Vector2(1, 0)
 shape = SubResource("RectangleShape2D_cvnsp")
 
 [node name="cameraremotetransform" type="RemoteTransform2D" parent="."]
