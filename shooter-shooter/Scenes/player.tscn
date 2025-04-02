@@ -1,13 +1,14 @@
-[gd_scene load_steps=5 format=3 uid="uid://ba31176o7tfyk"]
+[gd_scene load_steps=6 format=3 uid="uid://ba31176o7tfyk"]
 
 [ext_resource type="Script" uid="uid://b21lcd30dumrn" path="res://scripts/playerm.gd" id="1_v0iea"]
-[ext_resource type="Texture2D" uid="uid://con5xjm7gn3v8" path="res://icon.svg" id="2_cvnsp"]
+[ext_resource type="Texture2D" uid="uid://digr0hmsse8t" path="res://Assets/Miku Pixel Art.png" id="2_6t5aa"]
+[ext_resource type="Texture2D" uid="uid://6cn7faj18c73" path="res://Assets/leek gun.png" id="3_vgqql"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6t5aa"]
-size = Vector2(62, 61)
+size = Vector2(63, 47)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cvnsp"]
-size = Vector2(57, 57)
+size = Vector2(50.375, 44.875)
 
 [node name="player" type="CharacterBody2D"]
 collision_layer = 2
@@ -16,17 +17,17 @@ script = ExtResource("1_v0iea")
 
 [node name="BODY" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(-27, -2)
-scale = Vector2(0.492188, 0.523438)
-texture = ExtResource("2_cvnsp")
+position = Vector2(-29, -2)
+scale = Vector2(0.22108, 0.235116)
+texture = ExtResource("2_6t5aa")
 
 [node name="Gun" type="Sprite2D" parent="BODY"]
-position = Vector2(83.3016, 1.91045)
-scale = Vector2(0.31, 0.31)
-texture = ExtResource("2_cvnsp")
+position = Vector2(153.791, -4.25321)
+scale = Vector2(0.604733, 0.604733)
+texture = ExtResource("3_vgqql")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 0.5)
+position = Vector2(-25.5, -2.5)
 shape = SubResource("RectangleShape2D_6t5aa")
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -36,12 +37,12 @@ collision_layer = 4
 collision_mask = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox"]
-position = Vector2(1, 0)
+position = Vector2(-27, -2)
 shape = SubResource("RectangleShape2D_cvnsp")
 
 [node name="cameraremotetransform" type="RemoteTransform2D" parent="."]
 
 [node name="shootypart" type="Node2D" parent="."]
-position = Vector2(79, 0)
+position = Vector2(50, -2)
 
 [connection signal="body_entered" from="hitbox" to="." method="_on_hitbox_body_entered"]
