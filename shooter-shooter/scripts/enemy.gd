@@ -7,6 +7,18 @@ var speed: float = 100.0
 var direction := Vector2.ZERO
 var stop_distance := 20.0
 
+@onready var sprite: Sprite2D = $"default texture"
+@onready var hitbox: Area2D = $enemyhitbox
+
+
+var default_texture: Texture2D
+var damaged_texture: Texture2D
+
+func _ready() -> void:
+	default_texture = sprite.texture 
+	damaged_texture = preload("res://Assets/note2.png")
+	
+
 func _process(delta: float) -> void:
 	if player != null:
 		look_at(player.global_position)
@@ -42,4 +54,6 @@ func _on_playerdetect_body_exited(body: Node2D) -> void:
 	
 func _on_enemyhitbox_body_entered(body: Node2D) -> void:
 	if body is Bullet:
-		pass
+		print("Bullet hit enemy!") 
+		if damaged_texture:
+			sprite.texture = damaged_texture  # Change to the damaged sprite texture
