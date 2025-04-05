@@ -13,15 +13,17 @@ var changedsprite: Texture2D = preload("res://Assets/leek gun.png")
 
 var sprite: Sprite2D = null
 
+var is_dead: bool = false
+
 func _ready() -> void:
 	sprite = $Sprite2D
 
 func _process(delta: float) -> void:
-	if player != null:
+	if player != null and not is_dead:
 		look_at(player.global_position)
 	
 func _physics_process(delta: float) -> void:
-	if player != null:
+	if player != null and not is_dead:
 		var enemy_to_player = (player.global_position - global_position)
 		if enemy_to_player.length() > stop_distance:
 			direction = enemy_to_player.normalized()
@@ -54,6 +56,7 @@ func change_sprite(amount: int):
 			hit_points -= amount
 			if hit_points <= 0:
 				sprite.texture = changedsprite
+				is_dead = true
 				
 			
 		

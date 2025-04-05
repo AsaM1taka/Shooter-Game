@@ -10,10 +10,15 @@ var bullet_scene = preload("res://Scenes/bullet.tscn")
 
 var speed = 300
 
+var is_dead = false
+
 func _process(delta: float) -> void:
-	look_at(get_global_mouse_position())
+	if not is_dead:
+		look_at(get_global_mouse_position())
 
 func _physics_process(delta: float) -> void:
+	if is_dead:
+		return
 	var move_dir = Vector2(Input.get_axis("move_left", "move_right"),
 	Input.get_axis("move_up", "move_down"))
 	if move_dir != Vector2.ZERO:
@@ -32,5 +37,8 @@ func _physics_process(delta: float) -> void:
 
 func _on_hitbox_body_entered(body: Node2D) -> void:
 	if body is Enemy:
-		died.emit()
-		queue_free()
+		# Only trigger the game over if the enemy is not dead
+		if not body.is_dead:
+			died.emit()  # Emit died signal for the player
+			is_dead = true  # Set the player as dead
+			queue_free()  # Optionally remove the player from the scene
