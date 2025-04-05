@@ -19,13 +19,14 @@ func _ready():
 
 func _physics_process(delta: float) -> void:
 	global_position += direction * SPEED * delta
-
+	
 func _on_timer_timeout() -> void:
 	queue_free()
 
 
-#func _on_body_entered(body: Node2D) -> void:
-	#if body is Enemy:
-		#print("enemy hit")
+func _on_body_entered(body: Node2D) -> void:
+	if body is Enemy:
+		body.change_sprite(1)
+		print("enemy hit")
 		#body.queue_free()
-		#queue_free()
+		queue_free()
