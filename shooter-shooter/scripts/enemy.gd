@@ -9,7 +9,7 @@ var stop_distance := 20.0
 
 var hit_points: int = 1
 
-var changedsprite: Texture2D = preload("res://Assets/leek gun.png")
+var changedsprite: Texture2D = preload("res://Assets/Happy guy.png")
 
 var sprite: Sprite2D = null
 
@@ -18,9 +18,9 @@ var is_dead: bool = false
 func _ready() -> void:
 	sprite = $Sprite2D
 
-func _process(delta: float) -> void:
-	if player != null and not is_dead:
-		look_at(player.global_position)
+#func _process(delta: float) -> void:
+	#if player != null and not is_dead:
+		#look_at(player.global_position)
 	
 func _physics_process(delta: float) -> void:
 	if player != null and not is_dead:
