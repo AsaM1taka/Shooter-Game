@@ -39,3 +39,12 @@ position = Vector2(564, 344)
 position = Vector2(902, 39)
 
 [node name="MainCamera" type="Camera2D" parent="."]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TextEdit" type="TextEdit" parent="CanvasLayer"]
+offset_left = -51.0
+offset_top = 3.0
+offset_right = 196.0
+offset_bottom = 58.0
+text = "People Happy: 0"
