@@ -33,5 +33,7 @@ func _on_body_entered(body: Node2D) -> void:
 		#body.queue_free()
 		queue_free()
 		
-		var explosion = explosion_scene.instatiate()
+		var explosion = explosion_scene.instantiate()
 		explosion.global_position = global_position
+		explosion.emitting = true
+		$/root/World.add_child(explosion)
