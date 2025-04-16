@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://xmk72hcci2cv"]
+
+[ext_resource type="Texture2D" uid="uid://ctu8fguw865om" path="res://Assets/heartpixel.png" id="1_mbc3v"]
+
+[sub_resource type="Curve" id="Curve_yp4o6"]
+_data = [Vector2(0, 0.266514), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[node name="CPUParticles2D" type="CPUParticles2D"]
+texture = ExtResource("1_mbc3v")
+explosiveness = 1.0
+emission_shape = 1
+emission_sphere_radius = 0.01
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 165.24
+initial_velocity_max = 247.44
+scale_amount_min = 0.0
+scale_amount_max = 68.49
+scale_amount_curve = SubResource("Curve_yp4o6")

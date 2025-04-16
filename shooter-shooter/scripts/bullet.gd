@@ -5,6 +5,8 @@ class_name Bullet
 									  preload("res://Assets/note2.png"),
 									  preload("res://Assets/note3.png")]
 
+var explosion_scene = preload("res://Assets/heartpixel.png")
+
 var direction: Vector2
 
 const SPEED = 400
@@ -30,3 +32,6 @@ func _on_body_entered(body: Node2D) -> void:
 		print("enemy hit")
 		#body.queue_free()
 		queue_free()
+		
+		var explosion = explosion_scene.instatiate()
+		explosion.global_position = global_position
