@@ -58,6 +58,10 @@ func change_sprite(amount: int):
 				sprite.texture = changedsprite
 				is_dead = true
 				
+				var score_label = get_node_or_null("/root/World/CanvasLayer/Label")
+				if score_label:
+					score_label.add_point()
+				
 			
 		
 	

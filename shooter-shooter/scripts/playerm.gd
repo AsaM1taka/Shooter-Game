@@ -37,8 +37,7 @@ func _physics_process(delta: float) -> void:
 
 func _on_hitbox_body_entered(body: Node2D) -> void:
 	if body is Enemy:
-		# Only trigger the game over if the enemy is not dead
 		if not body.is_dead:
-			died.emit()  # Emit died signal for the player
-			is_dead = true  # Set the player as dead
-			queue_free()  # Optionally remove the player from the scene
+			died.emit()  
+			is_dead = true  
+			queue_free()  
