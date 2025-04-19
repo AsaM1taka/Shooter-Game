@@ -5,7 +5,7 @@ class_name Bullet
 									  preload("res://Assets/note2.png"),
 									  preload("res://Assets/note3.png")]
 
-var explosion_scene = preload("res://Assets/heartpixel.png")
+var explosion_scene = preload("res://Scenes/Explosion.tscn")
 
 var direction: Vector2
 
