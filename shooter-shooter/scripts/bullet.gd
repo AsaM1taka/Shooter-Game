@@ -5,6 +5,8 @@ class_name Bullet
 									  preload("res://Assets/note2.png"),
 									  preload("res://Assets/note3.png")]
 
+var explosion_scene = preload("res://Scenes/Explosion.tscn")
+
 var direction: Vector2
 
 const SPEED = 400
@@ -26,7 +28,14 @@ func _on_timer_timeout() -> void:
 
 func _on_body_entered(body: Node2D) -> void:
 	if body is Enemy:
+		if body.is_dead:
+			return
 		body.change_sprite(1)
 		print("enemy hit")
 		#body.queue_free()
 		queue_free()
+		
+		var explosion = explosion_scene.instantiate()
+		explosion.global_position = global_position
+		explosion.emitting = true
+		$/root/World.add_child(explosion)

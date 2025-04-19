@@ -42,14 +42,14 @@ func _on_playerdetect_body_entered(body: Node2D) -> void:
 		if player == null:
 			player = body
 			print(name +"found player")
-	pass # Replace with function body.
+	pass 
 
 func _on_playerdetect_body_exited(body: Node2D) -> void:
 	if body is Player:
 		if player !=null:
 			player = null
 			print(name + "lost player")
-	pass # Replace with function body.
+	pass 
 	
 func change_sprite(amount: int):
 		if amount > 0:
@@ -57,6 +57,10 @@ func change_sprite(amount: int):
 			if hit_points <= 0:
 				sprite.texture = changedsprite
 				is_dead = true
+				
+				var score_label = get_node_or_null("/root/World/CanvasLayer/Label")
+				if score_label:
+					score_label.add_point()
 				
 			
 		
