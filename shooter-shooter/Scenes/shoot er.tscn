@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://d01gfxhobx3x2" path="res://scripts/world.gd" id="1_xb2n0"]
 [ext_resource type="PackedScene" uid="uid://ba31176o7tfyk" path="res://Scenes/player.tscn" id="2_ur70f"]
 [ext_resource type="PackedScene" uid="uid://c8nn2vckjtl6y" path="res://Scenes/enemy.tscn" id="3_ur70f"]
-[ext_resource type="Script" uid="uid://0344kmf5xh04" path="res://Scenes/Score.gd" id="5_wqrvu"]
+[ext_resource type="Script" uid="uid://0344kmf5xh04" path="res://scripts/Score.gd" id="5_wqrvu"]
 
 [sub_resource type="QuadMesh" id="QuadMesh_8jy7u"]
 
@@ -38,6 +38,12 @@ position = Vector2(564, 344)
 
 [node name="enemy" parent="." instance=ExtResource("3_ur70f")]
 position = Vector2(902, 39)
+
+[node name="enemy2" parent="." instance=ExtResource("3_ur70f")]
+position = Vector2(71, 255)
+
+[node name="enemy3" parent="." instance=ExtResource("3_ur70f")]
+position = Vector2(749, 608)
 
 [node name="MainCamera" type="Camera2D" parent="."]
 
