@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://b3x04u3xbfci3"]
+[gd_scene load_steps=2 format=3 uid="uid://b3x04u3xbfci3"]
+
+[ext_resource type="Script" uid="uid://csfg8p12rcp8k" path="res://scripts/level_selection.gd" id="1_1m0xv"]
 
 [node name="levelSelection" type="Control"]
 layout_mode = 3
@@ -7,6 +9,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_1m0xv")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
@@ -67,3 +70,5 @@ offset_bottom = 235.0
 grow_horizontal = 2
 theme_override_font_sizes/font_size = 96
 text = "Level Selector"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Button" to="." method="_on_button_pressed"]
