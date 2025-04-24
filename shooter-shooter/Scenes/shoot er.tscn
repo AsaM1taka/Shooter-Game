@@ -39,6 +39,12 @@ position = Vector2(564, 344)
 [node name="enemy" parent="." instance=ExtResource("3_ur70f")]
 position = Vector2(902, 39)
 
+[node name="enemy2" parent="." instance=ExtResource("3_ur70f")]
+position = Vector2(71, 255)
+
+[node name="enemy3" parent="." instance=ExtResource("3_ur70f")]
+position = Vector2(749, 608)
+
 [node name="MainCamera" type="Camera2D" parent="."]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
