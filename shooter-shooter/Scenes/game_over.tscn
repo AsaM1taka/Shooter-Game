@@ -12,7 +12,7 @@ border_width_left = 70
 border_width_top = 70
 border_width_right = 70
 border_width_bottom = 70
-border_color = Color(0.537104, 0.879353, 0.783364, 1)
+border_color = Color(0.174487, 0.399004, 0.341343, 1)
 border_blend = true
 
 [node name="GameOver" type="CanvasLayer"]
@@ -68,50 +68,62 @@ theme_override_font_sizes/font_size = 41
 text = "QUIT"
 
 [node name="SadGuy" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.431373)
 position = Vector2(209, 584.22)
 texture = ExtResource("4_eoghk")
 
 [node name="SadGuy2" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.431373)
 position = Vector2(488, 584.22)
 texture = ExtResource("4_eoghk")
 
 [node name="SadGuy3" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.431373)
 position = Vector2(801, 584.22)
 texture = ExtResource("4_eoghk")
 
 [node name="SadGuy4" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.431373)
 position = Vector2(1077, 584.22)
 texture = ExtResource("4_eoghk")
 
 [node name="SadGuy5" type="Sprite2D" parent="."]
-position = Vector2(209, 375.005)
+modulate = Color(1, 1, 1, 0.431373)
+position = Vector2(209, 368)
 texture = ExtResource("4_eoghk")
 
 [node name="SadGuy6" type="Sprite2D" parent="."]
-position = Vector2(488, 375.005)
+modulate = Color(1, 1, 1, 0.431373)
+position = Vector2(488, 368)
 texture = ExtResource("4_eoghk")
 
 [node name="SadGuy7" type="Sprite2D" parent="."]
-position = Vector2(801, 375.005)
+modulate = Color(1, 1, 1, 0.431373)
+position = Vector2(801, 368)
 texture = ExtResource("4_eoghk")
 
 [node name="SadGuy8" type="Sprite2D" parent="."]
-position = Vector2(1077, 375.005)
+modulate = Color(1, 1, 1, 0.431373)
+position = Vector2(1077, 368)
 texture = ExtResource("4_eoghk")
 
 [node name="SadGuy9" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.431373)
 position = Vector2(209, 135.09)
 texture = ExtResource("4_eoghk")
 
 [node name="SadGuy10" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.431373)
 position = Vector2(488, 135.09)
 texture = ExtResource("4_eoghk")
 
 [node name="SadGuy11" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.431373)
 position = Vector2(801, 135.09)
 texture = ExtResource("4_eoghk")
 
 [node name="SadGuy12" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.431373)
 position = Vector2(1077, 135.09)
 texture = ExtResource("4_eoghk")
 

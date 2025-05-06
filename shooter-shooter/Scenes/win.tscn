@@ -54,6 +54,8 @@ theme_override_constants/separation = 60
 [node name="Title" type="Label" parent="PanelContainer/MarginContainer/Rows"]
 z_index = 615
 layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0.835559, 0.0836895, 0.414278, 1)
+theme_override_constants/shadow_offset_x = 8
 theme_override_fonts/font = ExtResource("2_g1l0l")
 theme_override_font_sizes/font_size = 111
 theme_override_styles/normal = SubResource("StyleBoxFlat_jwsd0")
