@@ -9,4 +9,5 @@ func _ready() -> void:
 
 func _on_player_died():
 	print("gameover")
-	get_tree().create_timer(3).timeout.connect(get_tree().reload_current_scene)
+	#get_tree().create_timer(3).timeout.connect(get_tree().reload_current_scene)
+	get_tree().change_scene_to_file("res://Scenes/game_over.tscn")

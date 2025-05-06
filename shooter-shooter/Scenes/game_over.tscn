@@ -1,0 +1,119 @@
+[gd_scene load_steps=6 format=3 uid="uid://bmj6wd56ghij1"]
+
+[ext_resource type="Script" uid="uid://brwvihk5q71qf" path="res://scripts/game_over.gd" id="1_ojehl"]
+[ext_resource type="FontFile" uid="uid://crq6qujty0uyr" path="res://Assets/vocaloid/VOC-IT.ttf" id="2_ek8ke"]
+[ext_resource type="FontFile" uid="uid://c5no5xiy7o6xb" path="res://Assets/vocaloid/VOC-RE.ttf" id="3_eoghk"]
+[ext_resource type="Texture2D" uid="uid://ckin80slssxu" path="res://Assets/Sad guy.png" id="4_eoghk"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i2yjh"]
+content_margin_top = 150.0
+bg_color = Color(0.363322, 0.658696, 0.656377, 1)
+border_width_left = 70
+border_width_top = 70
+border_width_right = 70
+border_width_bottom = 70
+border_color = Color(0.537104, 0.879353, 0.783364, 1)
+border_blend = true
+
+[node name="GameOver" type="CanvasLayer"]
+script = ExtResource("1_ojehl")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+offset_left = -2.0
+offset_right = 1278.0
+offset_bottom = 720.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_i2yjh")
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer"]
+z_index = 775
+layout_mode = 2
+
+[node name="Rows" type="VBoxContainer" parent="PanelContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 60
+
+[node name="Title" type="Label" parent="PanelContainer/MarginContainer/Rows"]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.908016, 0, 0.446151, 1)
+theme_override_constants/shadow_offset_x = 5
+theme_override_constants/outline_size = 30
+theme_override_fonts/font = ExtResource("2_ek8ke")
+theme_override_font_sizes/font_size = 111
+text = "Game Over"
+horizontal_alignment = 1
+
+[node name="CenterContainer" type="CenterContainer" parent="PanelContainer/MarginContainer/Rows"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/Rows/CenterContainer"]
+layout_mode = 2
+theme_override_constants/separation = 40
+
+[node name="restart" type="Button" parent="PanelContainer/MarginContainer/Rows/CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.921713, 0.814906, 0.396374, 1)
+theme_override_colors/font_focus_color = Color(0.299241, 0.610956, 0.387221, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 1, 1)
+theme_override_fonts/font = ExtResource("3_eoghk")
+theme_override_font_sizes/font_size = 41
+text = "    Restart    "
+
+[node name="quit" type="Button" parent="PanelContainer/MarginContainer/Rows/CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.921713, 0.814906, 0.396374, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_eoghk")
+theme_override_font_sizes/font_size = 41
+text = "QUIT"
+
+[node name="SadGuy" type="Sprite2D" parent="."]
+position = Vector2(209, 584.22)
+texture = ExtResource("4_eoghk")
+
+[node name="SadGuy2" type="Sprite2D" parent="."]
+position = Vector2(488, 584.22)
+texture = ExtResource("4_eoghk")
+
+[node name="SadGuy3" type="Sprite2D" parent="."]
+position = Vector2(801, 584.22)
+texture = ExtResource("4_eoghk")
+
+[node name="SadGuy4" type="Sprite2D" parent="."]
+position = Vector2(1077, 584.22)
+texture = ExtResource("4_eoghk")
+
+[node name="SadGuy5" type="Sprite2D" parent="."]
+position = Vector2(209, 375.005)
+texture = ExtResource("4_eoghk")
+
+[node name="SadGuy6" type="Sprite2D" parent="."]
+position = Vector2(488, 375.005)
+texture = ExtResource("4_eoghk")
+
+[node name="SadGuy7" type="Sprite2D" parent="."]
+position = Vector2(801, 375.005)
+texture = ExtResource("4_eoghk")
+
+[node name="SadGuy8" type="Sprite2D" parent="."]
+position = Vector2(1077, 375.005)
+texture = ExtResource("4_eoghk")
+
+[node name="SadGuy9" type="Sprite2D" parent="."]
+position = Vector2(209, 135.09)
+texture = ExtResource("4_eoghk")
+
+[node name="SadGuy10" type="Sprite2D" parent="."]
+position = Vector2(488, 135.09)
+texture = ExtResource("4_eoghk")
+
+[node name="SadGuy11" type="Sprite2D" parent="."]
+position = Vector2(801, 135.09)
+texture = ExtResource("4_eoghk")
+
+[node name="SadGuy12" type="Sprite2D" parent="."]
+position = Vector2(1077, 135.09)
+texture = ExtResource("4_eoghk")
+
+[connection signal="pressed" from="PanelContainer/MarginContainer/Rows/CenterContainer/VBoxContainer/restart" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="PanelContainer/MarginContainer/Rows/CenterContainer/VBoxContainer/quit" to="." method="_on_quit_pressed"]

@@ -1,0 +1,320 @@
+[gd_scene load_steps=10 format=3 uid="uid://cibw27d44cgvm"]
+
+[ext_resource type="Script" uid="uid://brwvihk5q71qf" path="res://scripts/game_over.gd" id="1_611cj"]
+[ext_resource type="FontFile" uid="uid://crq6qujty0uyr" path="res://Assets/vocaloid/VOC-IT.ttf" id="2_g1l0l"]
+[ext_resource type="FontFile" uid="uid://c5no5xiy7o6xb" path="res://Assets/vocaloid/VOC-RE.ttf" id="3_3xxyo"]
+[ext_resource type="Texture2D" uid="uid://rmn1d0rfe17o" path="res://Assets/Happy guy.png" id="4_ru4ub"]
+[ext_resource type="Texture2D" uid="uid://ctu8fguw865om" path="res://Assets/heartpixel.png" id="5_liiam"]
+[ext_resource type="Texture2D" uid="uid://fa8b7nrdb6ok" path="res://Assets/note2.png" id="6_5amea"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i2yjh"]
+content_margin_top = 150.0
+bg_color = Color(0.363322, 0.658696, 0.656377, 1)
+border_width_left = 70
+border_width_top = 70
+border_width_right = 70
+border_width_bottom = 70
+border_color = Color(0.537104, 0.879353, 0.783364, 1)
+border_blend = true
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jwsd0"]
+bg_color = Color(0.355791, 0.626622, 0.847554, 1)
+border_width_left = 150
+border_width_right = 150
+border_color = Color(0.8, 0.8, 0.8, 0)
+corner_radius_top_left = 680
+corner_radius_top_right = 905
+corner_radius_bottom_right = 900
+corner_radius_bottom_left = 645
+corner_detail = 1
+shadow_color = Color(0, 0, 0, 1)
+shadow_offset = Vector2(-3.175, 0.97)
+
+[sub_resource type="Curve" id="Curve_hu745"]
+_data = [Vector2(0, 0.499083), 0.0, 0.0, 0, 0, Vector2(0.817746, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[node name="Win" type="CanvasLayer"]
+script = ExtResource("1_611cj")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+offset_left = -2.0
+offset_right = 1278.0
+offset_bottom = 720.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_i2yjh")
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer"]
+z_index = 135
+layout_mode = 2
+
+[node name="Rows" type="VBoxContainer" parent="PanelContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 60
+
+[node name="Title" type="Label" parent="PanelContainer/MarginContainer/Rows"]
+z_index = 615
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_g1l0l")
+theme_override_font_sizes/font_size = 111
+theme_override_styles/normal = SubResource("StyleBoxFlat_jwsd0")
+text = "You Win!!!"
+horizontal_alignment = 1
+
+[node name="CenterContainer" type="CenterContainer" parent="PanelContainer/MarginContainer/Rows"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/Rows/CenterContainer"]
+layout_mode = 2
+theme_override_constants/separation = 40
+
+[node name="restart" type="Button" parent="PanelContainer/MarginContainer/Rows/CenterContainer/VBoxContainer"]
+z_index = 785
+layout_mode = 2
+theme_override_colors/font_disabled_color = Color(1, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.0589349, 0.52379, 1, 1)
+theme_override_colors/font_hover_color = Color(0.289877, 0.168469, 0.291026, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 1, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 1, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 1, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 1, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 1, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 1, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(1, 0.513117, 0.37901, 1)
+theme_override_colors/font_focus_color = Color(0.788871, 0.791579, 0.523767, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0.560784, 1)
+theme_override_fonts/font = ExtResource("3_3xxyo")
+theme_override_font_sizes/font_size = 41
+text = "    Restart    "
+
+[node name="quit" type="Button" parent="PanelContainer/MarginContainer/Rows/CenterContainer/VBoxContainer"]
+z_index = 910
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(0.289877, 0.168469, 0.291026, 1)
+theme_override_colors/font_color = Color(1, 0.513117, 0.37901, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0.560784, 1)
+theme_override_fonts/font = ExtResource("3_3xxyo")
+theme_override_font_sizes/font_size = 41
+text = "QUIT"
+
+[node name="Happy guys" type="CPUParticles2D" parent="PanelContainer/MarginContainer/Rows/CenterContainer"]
+z_index = 10
+position = Vector2(128, -153)
+texture = ExtResource("4_ru4ub")
+lifetime = 1.27
+emission_shape = 1
+emission_sphere_radius = 0.01
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 152.21
+initial_velocity_max = 152.21
+scale_amount_min = 0.0
+scale_amount_max = 3.0
+scale_amount_curve = SubResource("Curve_hu745")
+
+[node name="Happy guys10" type="CPUParticles2D" parent="PanelContainer/MarginContainer/Rows/CenterContainer"]
+z_index = 10
+position = Vector2(120, 267)
+texture = ExtResource("4_ru4ub")
+lifetime = 1.27
+emission_shape = 1
+emission_sphere_radius = 0.01
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 152.21
+initial_velocity_max = 152.21
+scale_amount_min = 0.0
+scale_amount_max = 3.0
+scale_amount_curve = SubResource("Curve_hu745")
+
+[node name="Happy guys11" type="CPUParticles2D" parent="PanelContainer/MarginContainer/Rows/CenterContainer"]
+z_index = 10
+position = Vector2(1098, -134)
+texture = ExtResource("4_ru4ub")
+lifetime = 1.27
+emission_shape = 1
+emission_sphere_radius = 0.01
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 152.21
+initial_velocity_max = 152.21
+scale_amount_min = 0.0
+scale_amount_max = 3.0
+scale_amount_curve = SubResource("Curve_hu745")
+
+[node name="Happy guys12" type="CPUParticles2D" parent="PanelContainer/MarginContainer/Rows/CenterContainer"]
+z_index = 10
+position = Vector2(1098, -134)
+texture = ExtResource("4_ru4ub")
+lifetime = 1.27
+emission_shape = 1
+emission_sphere_radius = 0.01
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 152.21
+initial_velocity_max = 152.21
+scale_amount_min = 0.0
+scale_amount_max = 3.0
+scale_amount_curve = SubResource("Curve_hu745")
+
+[node name="Happy guys3" type="CPUParticles2D" parent="PanelContainer/MarginContainer/Rows/CenterContainer"]
+z_index = 10
+position = Vector2(957, 170)
+texture = ExtResource("5_liiam")
+lifetime = 1.16
+emission_shape = 1
+emission_sphere_radius = 0.01
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 152.21
+initial_velocity_max = 152.21
+scale_amount_min = 0.0
+scale_amount_max = 3.0
+scale_amount_curve = SubResource("Curve_hu745")
+
+[node name="Happy guys9" type="CPUParticles2D" parent="PanelContainer/MarginContainer/Rows/CenterContainer"]
+z_index = 10
+position = Vector2(414, 9)
+texture = ExtResource("5_liiam")
+lifetime = 1.16
+emission_shape = 1
+emission_sphere_radius = 0.01
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 152.21
+initial_velocity_max = 152.21
+scale_amount_min = 0.0
+scale_amount_max = 3.0
+scale_amount_curve = SubResource("Curve_hu745")
+
+[node name="Happy guys4" type="CPUParticles2D" parent="PanelContainer/MarginContainer/Rows/CenterContainer"]
+z_index = 10
+position = Vector2(235, 230)
+texture = ExtResource("5_liiam")
+lifetime = 1.22
+emission_shape = 1
+emission_sphere_radius = 0.01
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 152.21
+initial_velocity_max = 152.21
+scale_amount_min = 0.0
+scale_amount_max = 3.0
+scale_amount_curve = SubResource("Curve_hu745")
+
+[node name="Happy guys13" type="CPUParticles2D" parent="PanelContainer/MarginContainer/Rows/CenterContainer"]
+z_index = 10
+position = Vector2(112, -230)
+texture = ExtResource("5_liiam")
+lifetime = 1.22
+emission_shape = 1
+emission_sphere_radius = 0.01
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 152.21
+initial_velocity_max = 152.21
+scale_amount_min = 0.0
+scale_amount_max = 3.0
+scale_amount_curve = SubResource("Curve_hu745")
+
+[node name="Happy guys5" type="CPUParticles2D" parent="PanelContainer/MarginContainer/Rows/CenterContainer"]
+z_index = 10
+position = Vector2(839, -182)
+texture = ExtResource("5_liiam")
+lifetime = 1.29
+emission_shape = 1
+emission_sphere_radius = 0.01
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 152.21
+initial_velocity_max = 152.21
+scale_amount_min = 0.0
+scale_amount_max = 3.0
+scale_amount_curve = SubResource("Curve_hu745")
+
+[node name="Happy guys6" type="CPUParticles2D" parent="PanelContainer/MarginContainer/Rows/CenterContainer"]
+z_index = 10
+position = Vector2(58, -43)
+texture = ExtResource("6_5amea")
+lifetime = 1.27
+emission_shape = 1
+emission_sphere_radius = 0.01
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 152.21
+initial_velocity_max = 152.21
+scale_amount_min = 0.0
+scale_amount_curve = SubResource("Curve_hu745")
+
+[node name="Happy guys7" type="CPUParticles2D" parent="PanelContainer/MarginContainer/Rows/CenterContainer"]
+z_index = 10
+position = Vector2(697, 192)
+texture = ExtResource("6_5amea")
+lifetime = 1.27
+emission_shape = 1
+emission_sphere_radius = 0.01
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 152.21
+initial_velocity_max = 152.21
+scale_amount_min = 0.0
+scale_amount_curve = SubResource("Curve_hu745")
+
+[node name="Happy guys8" type="CPUParticles2D" parent="PanelContainer/MarginContainer/Rows/CenterContainer"]
+z_index = 10
+position = Vector2(515, -195)
+texture = ExtResource("6_5amea")
+lifetime = 1.27
+emission_shape = 1
+emission_sphere_radius = 0.01
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 152.21
+initial_velocity_max = 152.21
+scale_amount_min = 0.0
+scale_amount_curve = SubResource("Curve_hu745")
+
+[node name="Happy guys14" type="CPUParticles2D" parent="PanelContainer/MarginContainer/Rows/CenterContainer"]
+z_index = 10
+position = Vector2(1109, 76)
+texture = ExtResource("6_5amea")
+lifetime = 1.27
+emission_shape = 1
+emission_sphere_radius = 0.01
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 152.21
+initial_velocity_max = 152.21
+scale_amount_min = 0.0
+scale_amount_curve = SubResource("Curve_hu745")
+
+[node name="Happy guys2" type="CPUParticles2D" parent="PanelContainer/MarginContainer/Rows/CenterContainer"]
+z_index = 10
+position = Vector2(912, 124)
+texture = ExtResource("4_ru4ub")
+lifetime = 1.29
+emission_shape = 1
+emission_sphere_radius = 0.01
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 152.21
+initial_velocity_max = 152.21
+scale_amount_min = 0.0
+scale_amount_max = 3.0
+scale_amount_curve = SubResource("Curve_hu745")
+
+[node name="Label" type="Label" parent="."]
+z_index = 1255
+offset_left = 68.0
+offset_top = 292.0
+offset_right = 1208.0
+offset_bottom = 322.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_3xxyo")
+theme_override_font_sizes/font_size = 26
+text = "You cured everyone with your music!!"
+horizontal_alignment = 1
+
+[connection signal="pressed" from="PanelContainer/MarginContainer/Rows/CenterContainer/VBoxContainer/restart" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="PanelContainer/MarginContainer/Rows/CenterContainer/VBoxContainer/quit" to="." method="_on_quit_pressed"]
