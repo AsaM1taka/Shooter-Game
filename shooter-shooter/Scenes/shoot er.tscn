@@ -1,20 +1,31 @@
-[gd_scene load_steps=7 format=3 uid="uid://p4oyjkjeh5e4"]
+[gd_scene load_steps=9 format=3 uid="uid://p4oyjkjeh5e4"]
 
 [ext_resource type="PackedScene" uid="uid://bdmg62n1335y2" path="res://Scenes/box.tscn" id="1_ivurm"]
 [ext_resource type="Script" uid="uid://d01gfxhobx3x2" path="res://scripts/world.gd" id="1_xb2n0"]
 [ext_resource type="PackedScene" uid="uid://ba31176o7tfyk" path="res://Scenes/player.tscn" id="2_ur70f"]
 [ext_resource type="PackedScene" uid="uid://c8nn2vckjtl6y" path="res://Scenes/enemy.tscn" id="3_ur70f"]
+[ext_resource type="FontFile" uid="uid://c5no5xiy7o6xb" path="res://Assets/vocaloid/VOC-RE.ttf" id="5_4ffuf"]
 [ext_resource type="Script" uid="uid://0344kmf5xh04" path="res://scripts/Score.gd" id="5_wqrvu"]
 
 [sub_resource type="QuadMesh" id="QuadMesh_8jy7u"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4ffuf"]
+content_margin_left = 9.0
+content_margin_top = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.243639, 0.631061, 0.61311, 1)
+corner_radius_top_left = 145
+corner_radius_top_right = 430
+corner_radius_bottom_right = 465
+corner_radius_bottom_left = 130
+
 [node name="World" type="Node2D"]
 script = ExtResource("1_xb2n0")
 
-[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
-modulate = Color(0, 0.39223, 0.137817, 1)
-position = Vector2(588, 461)
-scale = Vector2(9586, 6308)
+[node name="MeshInstance2D2" type="MeshInstance2D" parent="."]
+modulate = Color(1.20327e-07, 0.41771, 0.171767, 1)
+position = Vector2(5, 5)
+scale = Vector2(9.18914e+07, 3.97909e+07)
 mesh = SubResource("QuadMesh_8jy7u")
 metadata/_edit_lock_ = true
 
@@ -30,6 +41,102 @@ position = Vector2(1035, 130)
 [node name="box4" parent="." instance=ExtResource("1_ivurm")]
 position = Vector2(934, 493)
 
+[node name="box6" parent="." instance=ExtResource("1_ivurm")]
+position = Vector2(404, 793)
+
+[node name="box7" parent="." instance=ExtResource("1_ivurm")]
+position = Vector2(1102, 829)
+
+[node name="box8" parent="." instance=ExtResource("1_ivurm")]
+position = Vector2(1346, 507)
+
+[node name="box9" parent="." instance=ExtResource("1_ivurm")]
+position = Vector2(1649, -25)
+
+[node name="box10" parent="." instance=ExtResource("1_ivurm")]
+position = Vector2(1496, -15)
+
+[node name="box11" parent="." instance=ExtResource("1_ivurm")]
+position = Vector2(1789, -25)
+
+[node name="box12" parent="." instance=ExtResource("1_ivurm")]
+position = Vector2(1784, -149)
+
+[node name="box13" parent="." instance=ExtResource("1_ivurm")]
+position = Vector2(1787, -302)
+
+[node name="box14" parent="." instance=ExtResource("1_ivurm")]
+position = Vector2(1782, -442)
+
+[node name="box15" parent="." instance=ExtResource("1_ivurm")]
+position = Vector2(1642, -442)
+
+[node name="box16" parent="." instance=ExtResource("1_ivurm")]
+position = Vector2(1486, -442)
+
+[node name="box17" parent="." instance=ExtResource("1_ivurm")]
+position = Vector2(1338, -445)
+
+[node name="box18" parent="." instance=ExtResource("1_ivurm")]
+position = Vector2(1195, -442)
+
+[node name="box19" parent="." instance=ExtResource("1_ivurm")]
+position = Vector2(1058, -437)
+
+[node name="box20" parent="." instance=ExtResource("1_ivurm")]
+position = Vector2(1061, -302)
+
+[node name="box21" parent="." instance=ExtResource("1_ivurm")]
+position = Vector2(1061, -175)
+
+[node name="box22" parent="." instance=ExtResource("1_ivurm")]
+position = Vector2(768, -139)
+
+[node name="box23" parent="." instance=ExtResource("1_ivurm")]
+position = Vector2(60, -289)
+
+[node name="box24" parent="." instance=ExtResource("1_ivurm")]
+position = Vector2(-718, 702)
+
+[node name="box25" parent="." instance=ExtResource("1_ivurm")]
+position = Vector2(-718, 843)
+
+[node name="box26" parent="." instance=ExtResource("1_ivurm")]
+position = Vector2(-718, 991)
+
+[node name="box27" parent="." instance=ExtResource("1_ivurm")]
+position = Vector2(-570, 991)
+
+[node name="box28" parent="." instance=ExtResource("1_ivurm")]
+position = Vector2(-414, 995)
+
+[node name="box29" parent="." instance=ExtResource("1_ivurm")]
+position = Vector2(-262, 995)
+
+[node name="box30" parent="." instance=ExtResource("1_ivurm")]
+position = Vector2(-118, 991)
+
+[node name="box31" parent="." instance=ExtResource("1_ivurm")]
+position = Vector2(-126, 850)
+
+[node name="box32" parent="." instance=ExtResource("1_ivurm")]
+position = Vector2(-574, 573)
+
+[node name="box33" parent="." instance=ExtResource("1_ivurm")]
+position = Vector2(-426, 569)
+
+[node name="box34" parent="." instance=ExtResource("1_ivurm")]
+position = Vector2(-304, 227)
+
+[node name="box35" parent="." instance=ExtResource("1_ivurm")]
+position = Vector2(-695, -134)
+
+[node name="box36" parent="." instance=ExtResource("1_ivurm")]
+position = Vector2(778, 1188)
+
+[node name="box37" parent="." instance=ExtResource("1_ivurm")]
+position = Vector2(1811, 432)
+
 [node name="box5" parent="." instance=ExtResource("1_ivurm")]
 position = Vector2(226, 489)
 
@@ -42,8 +149,47 @@ position = Vector2(902, 39)
 [node name="enemy2" parent="." instance=ExtResource("3_ur70f")]
 position = Vector2(71, 255)
 
+[node name="enemy4" parent="." instance=ExtResource("3_ur70f")]
+position = Vector2(-358, 757)
+
+[node name="enemy5" parent="." instance=ExtResource("3_ur70f")]
+position = Vector2(1515, 409)
+
+[node name="enemy6" parent="." instance=ExtResource("3_ur70f")]
+position = Vector2(337, -280)
+
+[node name="enemy7" parent="." instance=ExtResource("3_ur70f")]
+position = Vector2(1458, -229)
+
+[node name="enemy8" parent="." instance=ExtResource("3_ur70f")]
+position = Vector2(1269, 943)
+
+[node name="enemy9" parent="." instance=ExtResource("3_ur70f")]
+position = Vector2(-493, -112)
+
+[node name="enemy10" parent="." instance=ExtResource("3_ur70f")]
+position = Vector2(226, 995)
+
 [node name="enemy3" parent="." instance=ExtResource("3_ur70f")]
 position = Vector2(749, 608)
+
+[node name="enemy11" parent="." instance=ExtResource("3_ur70f")]
+position = Vector2(727, 972)
+
+[node name="enemy12" parent="." instance=ExtResource("3_ur70f")]
+position = Vector2(1188, 250)
+
+[node name="enemy13" parent="." instance=ExtResource("3_ur70f")]
+position = Vector2(-582, 332)
+
+[node name="enemy14" parent="." instance=ExtResource("3_ur70f")]
+position = Vector2(-149, -233)
+
+[node name="enemy15" parent="." instance=ExtResource("3_ur70f")]
+position = Vector2(108, 671)
+
+[node name="enemy16" parent="." instance=ExtResource("3_ur70f")]
+position = Vector2(770, -327)
 
 [node name="MainCamera" type="Camera2D" parent="."]
 
@@ -54,5 +200,12 @@ offset_left = 18.0
 offset_top = 9.0
 offset_right = 143.0
 offset_bottom = 32.0
-text = "Happy people: 0"
+theme_override_colors/font_shadow_color = Color(0.230315, 0.230315, 0.230315, 1)
+theme_override_colors/font_outline_color = Color(0.798118, 0.0973087, 0.514917, 0.988235)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("5_4ffuf")
+theme_override_font_sizes/font_size = 21
+theme_override_styles/normal = SubResource("StyleBoxFlat_4ffuf")
+text = "   Happy people: 0   "
 script = ExtResource("5_wqrvu")

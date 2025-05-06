@@ -3,7 +3,7 @@ class_name Enemy
 
 var player: Player = null
 
-var speed: float = 100.0
+var speed: float = 120.0
 var direction := Vector2.ZERO
 var stop_distance := 20.0
 
