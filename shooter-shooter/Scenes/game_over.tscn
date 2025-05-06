@@ -1,0 +1,44 @@
+[gd_scene load_steps=3 format=3 uid="uid://bmj6wd56ghij1"]
+
+[ext_resource type="Script" uid="uid://brwvihk5q71qf" path="res://scripts/game_over.gd" id="1_ojehl"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i2yjh"]
+bg_color = Color(0.363322, 0.658696, 0.656377, 1)
+
+[node name="GameOver" type="CanvasLayer"]
+script = ExtResource("1_ojehl")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+offset_right = 1280.0
+offset_bottom = 720.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_i2yjh")
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer"]
+layout_mode = 2
+
+[node name="Rows" type="VBoxContainer" parent="PanelContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 60
+
+[node name="Title" type="Label" parent="PanelContainer/MarginContainer/Rows"]
+layout_mode = 2
+text = "Game Over"
+horizontal_alignment = 1
+
+[node name="CenterContainer" type="CenterContainer" parent="PanelContainer/MarginContainer/Rows"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/Rows/CenterContainer"]
+layout_mode = 2
+theme_override_constants/separation = 40
+
+[node name="restart" type="Button" parent="PanelContainer/MarginContainer/Rows/CenterContainer/VBoxContainer"]
+layout_mode = 2
+text = "Restart"
+
+[node name="quit" type="Button" parent="PanelContainer/MarginContainer/Rows/CenterContainer/VBoxContainer"]
+layout_mode = 2
+text = "QUIT"
+
+[connection signal="pressed" from="PanelContainer/MarginContainer/Rows/CenterContainer/VBoxContainer/restart" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="PanelContainer/MarginContainer/Rows/CenterContainer/VBoxContainer/quit" to="." method="_on_quit_pressed"]
