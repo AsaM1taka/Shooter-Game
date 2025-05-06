@@ -1,6 +1,7 @@
 extends Label
 
 var score = 0
+const WIN_SCORE = 16
 
 func _ready() -> void:
 	text = "Score: %d" % score
@@ -8,3 +9,9 @@ func _ready() -> void:
 func add_point():
 	score += 1
 	text = "Score: %d" % score
+
+	if score >= WIN_SCORE:
+		show_win_screen()
+
+func show_win_screen():
+	get_tree().change_scene_to_file("res://Scenes/win.tscn")

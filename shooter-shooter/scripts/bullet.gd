@@ -33,9 +33,13 @@ func _on_body_entered(body: Node2D) -> void:
 		body.change_sprite(1)
 		print("enemy hit")
 		#body.queue_free()
-		queue_free()
+		
 		
 		var explosion = explosion_scene.instantiate()
 		explosion.global_position = global_position
 		explosion.emitting = true
-		$/root/World.add_child(explosion)
+		get_parent().add_child(explosion)
+		
+		queue_free()
+		
+		
