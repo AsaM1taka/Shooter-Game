@@ -4,6 +4,15 @@ Course: Game Design
 
 Project Title: Miku Madness
 
+Video:
+https://youtu.be/PyAbzsiHQjA
+
+Screenshots:
+![image](https://github.com/user-attachments/assets/7d975f9f-2160-4352-bf02-cb0ac5fab019)
+![image](https://github.com/user-attachments/assets/21f1bae6-d82e-4671-9930-f78f1d36dffe)
+![image](https://github.com/user-attachments/assets/f17f560e-ebca-4d6c-b401-7061185bfbad)
+
+
 Description of Project:
 Play as well known vocaloid "Miku", to spread her songs to all her sad fans who need cheering up. By spreading her songs she can win by helping 16 people become happy.
 
