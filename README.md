@@ -20,7 +20,18 @@ Art- Created by me
 
 bullet.gd - modified from [reference](https://www.youtube.com/watch?v=RxgkNv3APoU)
 
+| Assets       | Savings |
+| ----------- | ------- |
+| Art         | Created by me.|
+| bullet.gd   | modified from [reference](https://www.youtube.com/watch?v=RxgkNv3APoU)|
+| player.gd   | modified from [reference](https://www.youtube.com/watch?v=DA7O9hjjHjE)|
+| enemy.gd    | modified from [reference](https://www.youtube.com/watch?v=FXPdPY8pWJc)|
+| game_over.gd| modified from [reference](https://www.youtube.com/watch?v=aPN7k7irDnY&t=1539s)|
+| Score.gd    | modified from [reference](https://www.youtube.com/watch?v=RxgkNv3APoU)|
+| world.gd    | modified from [reference](https://www.youtube.com/watch?v=DA7O9hjjHjE)|
 
+
+https://www.youtube.com/watch?v=DA7O9hjjHjE
 
 Resources used:
 https://youtu.be/RxgkNv3APoU?si=VtZtdeYdX0E5d-9P
