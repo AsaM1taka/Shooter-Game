@@ -15,7 +15,10 @@ Player character shoots bullets at enemies who follow you when they enter the Ar
 counted as a point on the Label. 
 
 Assets:
+
 Art- Created by me
+
+bullet.gd - modified from [reference](https://www.youtube.com/watch?v=RxgkNv3APoU)
 
 
 
