@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://p4oyjkjeh5e4"]
+[gd_scene load_steps=14 format=3 uid="uid://p4oyjkjeh5e4"]
 
 [ext_resource type="PackedScene" uid="uid://bdmg62n1335y2" path="res://Scenes/box.tscn" id="1_ivurm"]
 [ext_resource type="Script" uid="uid://d01gfxhobx3x2" path="res://scripts/world.gd" id="1_xb2n0"]
@@ -19,6 +19,14 @@ corner_radius_top_left = 145
 corner_radius_top_right = 430
 corner_radius_bottom_right = 465
 corner_radius_bottom_left = 130
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_bbacd"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_lcva5"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_y2md0"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ytypq"]
 
 [node name="World" type="Node2D"]
 script = ExtResource("1_xb2n0")
@@ -214,3 +222,25 @@ script = ExtResource("5_wqrvu")
 [node name="BG Music" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("7_bbacd")
 autoplay = true
+max_distance = 3613.0
+
+[node name="Walls" type="StaticBody2D" parent="."]
+
+[node name="Top" type="CollisionShape2D" parent="Walls"]
+position = Vector2(533, -650)
+rotation = 3.14159
+shape = SubResource("WorldBoundaryShape2D_bbacd")
+
+[node name="b" type="CollisionShape2D" parent="Walls"]
+position = Vector2(604, 1496)
+shape = SubResource("WorldBoundaryShape2D_lcva5")
+
+[node name="l" type="CollisionShape2D" parent="Walls"]
+position = Vector2(2203, 344)
+rotation = -1.5708
+shape = SubResource("WorldBoundaryShape2D_y2md0")
+
+[node name="r" type="CollisionShape2D" parent="Walls"]
+position = Vector2(-1006, 418)
+rotation = 1.56818
+shape = SubResource("WorldBoundaryShape2D_ytypq")

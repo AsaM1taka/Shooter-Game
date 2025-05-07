@@ -47,7 +47,8 @@ shape = SubResource("RectangleShape2D_cvnsp")
 position = Vector2(50, -2)
 
 [node name="Shoot" type="AudioStreamPlayer2D" parent="."]
+scale = Vector2(0.989506, 1)
 stream = ExtResource("4_vgqql")
-volume_db = -33.91
+volume_db = -26.052
 
 [connection signal="body_entered" from="hitbox" to="." method="_on_hitbox_body_entered"]
