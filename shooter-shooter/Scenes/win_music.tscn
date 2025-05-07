@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://bfwnsb0y0ol8n"]
+
+[ext_resource type="AudioStream" uid="uid://d3tmugus475dm" path="res://Assets/World_is_Mine-Hatsune_Miku.mp3" id="1_hovwd"]
+
+[node name="WinMusic" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_hovwd")
+autoplay = true

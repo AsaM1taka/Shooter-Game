@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://depficyvtdykf"]
+[gd_scene load_steps=4 format=3 uid="uid://depficyvtdykf"]
 
 [ext_resource type="Script" uid="uid://bsmfgs2jtyods" path="res://scripts/bullet.gd" id="1_oduel"]
+[ext_resource type="AudioStream" uid="uid://d3xovm25f0cf1" path="res://Assets/Hatsune Miku - Popipo-[AudioTrimmer.com].mp3" id="2_oduel"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xjght"]
 size = Vector2(26, 16)
@@ -17,5 +18,8 @@ scale = Vector2(0.100781, 0.075)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_xjght")
+
+[node name="BulletSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_oduel")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

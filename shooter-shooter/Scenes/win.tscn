@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://cibw27d44cgvm"]
+[gd_scene load_steps=11 format=3 uid="uid://cibw27d44cgvm"]
 
 [ext_resource type="Script" uid="uid://brwvihk5q71qf" path="res://scripts/game_over.gd" id="1_611cj"]
 [ext_resource type="FontFile" uid="uid://crq6qujty0uyr" path="res://Assets/vocaloid/VOC-IT.ttf" id="2_g1l0l"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://rmn1d0rfe17o" path="res://Assets/Happy guy.png" id="4_ru4ub"]
 [ext_resource type="Texture2D" uid="uid://ctu8fguw865om" path="res://Assets/heartpixel.png" id="5_liiam"]
 [ext_resource type="Texture2D" uid="uid://fa8b7nrdb6ok" path="res://Assets/note2.png" id="6_5amea"]
+[ext_resource type="AudioStream" uid="uid://d3tmugus475dm" path="res://Assets/World_is_Mine-Hatsune_Miku.mp3" id="7_liiam"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i2yjh"]
 content_margin_top = 150.0
@@ -317,6 +318,10 @@ theme_override_fonts/font = ExtResource("3_3xxyo")
 theme_override_font_sizes/font_size = 26
 text = "You cured everyone with your music!!"
 horizontal_alignment = 1
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_liiam")
+autoplay = true
 
 [connection signal="pressed" from="PanelContainer/MarginContainer/Rows/CenterContainer/VBoxContainer/restart" to="." method="_on_restart_pressed"]
 [connection signal="pressed" from="PanelContainer/MarginContainer/Rows/CenterContainer/VBoxContainer/quit" to="." method="_on_quit_pressed"]

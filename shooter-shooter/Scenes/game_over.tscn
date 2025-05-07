@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://bmj6wd56ghij1"]
+[gd_scene load_steps=7 format=3 uid="uid://bmj6wd56ghij1"]
 
 [ext_resource type="Script" uid="uid://brwvihk5q71qf" path="res://scripts/game_over.gd" id="1_ojehl"]
 [ext_resource type="FontFile" uid="uid://crq6qujty0uyr" path="res://Assets/vocaloid/VOC-IT.ttf" id="2_ek8ke"]
 [ext_resource type="FontFile" uid="uid://c5no5xiy7o6xb" path="res://Assets/vocaloid/VOC-RE.ttf" id="3_eoghk"]
 [ext_resource type="Texture2D" uid="uid://ckin80slssxu" path="res://Assets/Sad guy.png" id="4_eoghk"]
+[ext_resource type="AudioStream" uid="uid://dinamu4non2le" path="res://Assets/Hatsune Miku unravel.mp3" id="5_14u15"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i2yjh"]
 content_margin_top = 150.0
@@ -126,6 +127,10 @@ texture = ExtResource("4_eoghk")
 modulate = Color(1, 1, 1, 0.431373)
 position = Vector2(1077, 135.09)
 texture = ExtResource("4_eoghk")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_14u15")
+autoplay = true
 
 [connection signal="pressed" from="PanelContainer/MarginContainer/Rows/CenterContainer/VBoxContainer/restart" to="." method="_on_restart_pressed"]
 [connection signal="pressed" from="PanelContainer/MarginContainer/Rows/CenterContainer/VBoxContainer/quit" to="." method="_on_quit_pressed"]

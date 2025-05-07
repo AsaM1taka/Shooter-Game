@@ -1,6 +1,7 @@
 extends CharacterBody2D
 class_name Enemy
 
+@onready var death_noise = $Cheer
 var player: Player = null
 
 var speed: float = 120.0
@@ -57,6 +58,7 @@ func change_sprite(amount: int):
 			if hit_points <= 0:
 				sprite.texture = changedsprite
 				is_dead = true
+				death_noise.play()
 				
 				var score_label = get_node_or_null("/root/World/CanvasLayer/Label")
 				if score_label:
