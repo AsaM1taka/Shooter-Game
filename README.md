@@ -2,8 +2,8 @@ Name: Amy Madden
 Student Number: C24399391
 Course: Game Design
 
-
 Project Title: Miku Madness
+
 Description of Project:
 Play as well known vocaloid "Miku", to spread her songs to all her sad fans who need cheering up. By spreading her songs she can win by helping everyone.
 
@@ -17,11 +17,15 @@ counted as a point on the Label.
 Assets:
 Art- Created by me
 
+
+
 Resources used:
 https://youtu.be/RxgkNv3APoU?si=VtZtdeYdX0E5d-9P
 https://youtu.be/DA7O9hjjHjE?si=vaw3b9ld0CD4OSic
 https://youtu.be/DA7O9hjjHjE?si=vaw3b9ld0CD4OSic
 https://youtu.be/FXPdPY8pWJc?si=G7bWcAkpSuhAMWBp
+https://mixkit.co/free-sound-effects/win/
+https://archive.org/
 
 What I am most proud of: 
 I am most proud of the art in the game, I enjoy making pixel art and it was fun to implement
