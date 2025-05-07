@@ -5,6 +5,8 @@ signal died
 
 @onready var camera_remote_transform = $cameraremotetransform
 
+@onready var bullet_noise = $Shoot
+
 var bullet_scene = preload("res://Scenes/bullet.tscn")
 @onready var shooty_part = $shootypart
 
@@ -28,6 +30,7 @@ func _physics_process(delta: float) -> void:
 		velocity.y = move_toward(velocity.y, 0, speed)
 		
 	if Input.is_action_just_pressed("shoot"):
+		bullet_noise.play()
 		var bullet = bullet_scene.instantiate()
 		bullet.global_position = shooty_part.global_position
 		bullet.direction = (get_global_mouse_position() - global_position).normalized()

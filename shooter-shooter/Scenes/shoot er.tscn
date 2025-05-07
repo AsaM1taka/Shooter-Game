@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://p4oyjkjeh5e4"]
+[gd_scene load_steps=10 format=3 uid="uid://p4oyjkjeh5e4"]
 
 [ext_resource type="PackedScene" uid="uid://bdmg62n1335y2" path="res://Scenes/box.tscn" id="1_ivurm"]
 [ext_resource type="Script" uid="uid://d01gfxhobx3x2" path="res://scripts/world.gd" id="1_xb2n0"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://c8nn2vckjtl6y" path="res://Scenes/enemy.tscn" id="3_ur70f"]
 [ext_resource type="FontFile" uid="uid://c5no5xiy7o6xb" path="res://Assets/vocaloid/VOC-RE.ttf" id="5_4ffuf"]
 [ext_resource type="Script" uid="uid://0344kmf5xh04" path="res://scripts/Score.gd" id="5_wqrvu"]
+[ext_resource type="AudioStream" uid="uid://c2pmq1sqfvq26" path="res://Assets/BGmiku music.mp3" id="7_bbacd"]
 
 [sub_resource type="QuadMesh" id="QuadMesh_8jy7u"]
 
@@ -209,3 +210,7 @@ theme_override_font_sizes/font_size = 21
 theme_override_styles/normal = SubResource("StyleBoxFlat_4ffuf")
 text = "   Happy people: 0   "
 script = ExtResource("5_wqrvu")
+
+[node name="BG Music" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_bbacd")
+autoplay = true

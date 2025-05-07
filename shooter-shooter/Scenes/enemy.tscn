@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://c8nn2vckjtl6y"]
+[gd_scene load_steps=6 format=3 uid="uid://c8nn2vckjtl6y"]
 
 [ext_resource type="Script" uid="uid://bw7jy2hsuuecv" path="res://scripts/enemy.gd" id="1_1f0kj"]
 [ext_resource type="Texture2D" uid="uid://ckin80slssxu" path="res://Assets/Sad guy.png" id="2_1f0kj"]
+[ext_resource type="AudioStream" uid="uid://14gumj4uavko" path="res://Assets/mixkit-fairy-cartoon-success-voice-344.wav" id="3_afpow"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4gyqm"]
 size = Vector2(69.5, 60.5)
@@ -30,6 +31,11 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="playerdetect"]
 shape = SubResource("CircleShape2D_qi2p4")
+
+[node name="Cheer" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_afpow")
+volume_db = -11.545
+pitch_scale = 0.86
 
 [connection signal="body_entered" from="playerdetect" to="." method="_on_playerdetect_body_entered"]
 [connection signal="body_exited" from="playerdetect" to="." method="_on_playerdetect_body_exited"]

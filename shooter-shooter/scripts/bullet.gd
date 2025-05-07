@@ -4,6 +4,8 @@ class_name Bullet
 @export var bullet_sprites: Array = [ preload("res://Assets/note 1.png"),
 									  preload("res://Assets/note2.png"),
 									  preload("res://Assets/note3.png")]
+					
+
 
 var explosion_scene = preload("res://Scenes/Explosion.tscn")
 

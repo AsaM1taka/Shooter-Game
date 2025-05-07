@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://d3xovm25f0cf1"
+path="res://.godot/imported/Hatsune Miku - Popipo-[AudioTrimmer.com].mp3-18d3eff03e5f7f5d74db755d733f4465.mp3str"
+
+[deps]
+
+source_file="res://Assets/Hatsune Miku - Popipo-[AudioTrimmer.com].mp3"
+dest_files=["res://.godot/imported/Hatsune Miku - Popipo-[AudioTrimmer.com].mp3-18d3eff03e5f7f5d74db755d733f4465.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
