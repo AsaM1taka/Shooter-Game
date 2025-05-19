@@ -1,16 +1,16 @@
 extends Label
 
 var score = 0
-const WIN_SCORE = 16
+const winscore = 16
 
 func _ready() -> void:
-	text = "Happiness score: %d   " % score
+	text = "Happiness score: {score}"
 
 func add_point():
 	score += 1
-	text = "Happiness score: %d   " % score
+	text = "Happiness score: {score}"
 
-	if score >= WIN_SCORE:
+	if score >= winscore:
 		show_win_screen()
 
 func show_win_screen():
