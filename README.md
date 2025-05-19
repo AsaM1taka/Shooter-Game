@@ -30,7 +30,7 @@ Player character shoots bullets at enemies who follow you when they enter the Ar
 | player.gd   | modified from [reference](https://www.youtube.com/watch?v=DA7O9hjjHjE)|
 | enemy.gd    | modified from [reference](https://www.youtube.com/watch?v=FXPdPY8pWJc)|
 | game_over.gd| modified from [reference](https://www.youtube.com/watch?v=aPN7k7irDnY&t=1539s)|
-| Score.gd    | modified from [reference](https://www.youtube.com/watch?v=RxgkNv3APoU)|
+| Score.gd    | modified from [reference](https://docs.godotengine.org/en/stable/getting_started/first_3d_game/08.score_and_replay.html)|
 | world.gd    | modified from [reference](https://www.youtube.com/watch?v=DA7O9hjjHjE)|
 
 
